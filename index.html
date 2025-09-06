@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Web 電卓</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main class="app" aria-label="電卓アプリ">
+      <div class="calculator" role="application">
+        <div class="display" aria-live="polite">
+          <div id="expression" class="expression" aria-label="式"></div>
+          <div id="result" class="result" aria-label="結果">0</div>
+        </div>
+
+        <div class="keys" role="group" aria-label="電卓キー">
+          <button class="key fn" data-action="clear" aria-label="全消去">AC</button>
+          <button class="key fn" data-action="sign" aria-label="符号反転">+/-</button>
+          <button class="key fn" data-action="percent" aria-label="パーセント">%</button>
+          <button class="key op" data-action="divide" aria-label="割り算">÷</button>
+
+          <button class="key" data-digit="7">7</button>
+          <button class="key" data-digit="8">8</button>
+          <button class="key" data-digit="9">9</button>
+          <button class="key op" data-action="multiply" aria-label="掛け算">×</button>
+
+          <button class="key" data-digit="4">4</button>
+          <button class="key" data-digit="5">5</button>
+          <button class="key" data-digit="6">6</button>
+          <button class="key op" data-action="subtract" aria-label="引き算">−</button>
+
+          <button class="key" data-digit="1">1</button>
+          <button class="key" data-digit="2">2</button>
+          <button class="key" data-digit="3">3</button>
+          <button class="key op" data-action="add" aria-label="足し算">＋</button>
+
+          <button class="key zero" data-digit="0">0</button>
+          <button class="key" data-digit=".">.</button>
+          <button class="key eq" data-action="equals" aria-label="イコール">＝</button>
+        </div>
+      </div>
+      <footer class="footer">
+        <span>標準的な電卓（AC, +/- , %, ÷, ×, −, ＋, ＝, 小数点, 0-9）</span>
+      </footer>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+  </html>
+
